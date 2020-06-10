@@ -1,0 +1,211 @@
+@import '../../main.scss';
+
+// banner
+.banner-section {
+ width: 100%;
+ height: $home-ht;
+ background-color: $purple;
+}
+
+.b-details {
+ position: absolute;
+ display: flex;
+ justify-content: space-between;
+ width: 100%;
+ height: 100%;
+ .banner-img {
+  align-self: flex-end;
+  position: relative;
+  z-index: 2;
+  img {
+   position: relative;
+   top: 5px;
+  }
+ }
+ .b-icons {
+  position: absolute;
+  right: 350px;
+  top: 10px;
+  z-index: 1;
+  opacity: 0.5;
+ }
+ .main-logo {
+  align-self: flex-start;
+  margin: 40px;
+  z-index: 5;
+  img {
+   cursor: pointer;
+  }
+ }
+}
+
+.b-content {
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ margin-top: 250px;
+ margin-left: 50px;
+ .logo-header {
+  font-weight: 600;
+  color: $white;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+ }
+
+ .slogan {
+  margin-top: 20px;
+  width: 430px;
+  line-height: 35px;
+
+  h2 {
+   font-weight: 400;
+   font-size: 25px;
+   color: $white;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+
+   &::after {
+    content: '';
+    border-bottom: 1px solid white;
+    padding-left: 150px;
+    position: relative;
+    left: 40px;
+    bottom: 6px;
+   }
+  }
+ }
+ .defination {
+  margin-top: 40px;
+  width: 800px;
+
+  p {
+   line-height: 30px;
+   font-size: 20px;
+   color: $white;
+   font-weight: 300;
+   letter-spacing: 1.5px;
+  }
+ }
+}
+
+nav {
+ display: flex;
+ position: absolute;
+ top: 30px;
+ left: 350px;
+ width: 1000px;
+ height: 78px;
+ z-index: 4;
+}
+
+.menu-list {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ width: 100%;
+
+ li {
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+  padding-left: 22px;
+  cursor: pointer;
+  height: 50px;
+
+  a {
+   position: relative;
+   color: white;
+   text-transform: capitalize;
+   font-size: 24px;
+   font-weight: 400;
+  }
+ }
+}
+
+.hover {
+ position: absolute;
+ top: -60px;
+ left: -80px;
+}
+
+//menu icons
+.menu-icon {
+ position: relative;
+ right: 10px;
+}
+.menu-hover {
+ position: absolute;
+ content: url(../../designMaterials//header/hover.png);
+ top: -60px;
+ z-index: 0;
+ pointer-events: none;
+ opacity: 0;
+ transition: all 0.6s;
+}
+.home {
+ &::before {
+  content: url(../../designMaterials/header/icon_home.png);
+  @extend.menu-icon;
+ }
+ &::after {
+  @extend.menu-hover;
+  left: -50px;
+ }
+ &:hover:after {
+  opacity: 1;
+ }
+}
+.planets {
+ &::before {
+  content: url(../../designMaterials/header/icon_planets.png);
+  @extend.menu-icon;
+ }
+ &::after {
+  @extend.menu-hover;
+  left: 130px;
+ }
+ &:hover:after {
+  opacity: 1;
+ }
+}
+.about {
+ &::before {
+  content: url(../../designMaterials/header/icon_about.png);
+  @extend.menu-icon;
+ }
+ &::after {
+  @extend.menu-hover;
+  left: 330px;
+ }
+ &:hover:after {
+  opacity: 1;
+ }
+}
+.team {
+ &::before {
+  content: url(../../designMaterials/header/icon_team.png);
+  @extend.menu-icon;
+ }
+ &::after {
+  @extend.menu-hover;
+  left: 550px;
+ }
+ &:hover:after {
+  opacity: 1;
+ }
+}
+.contact {
+ &::before {
+  content: url(../../designMaterials/header/icon_contact.png);
+  @extend.menu-icon;
+ }
+ &::after {
+  @extend.menu-hover;
+  left: 760px;
+ }
+ &:hover:after {
+  opacity: 1;
+ }
+}

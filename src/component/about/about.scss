@@ -1,0 +1,49 @@
+@import '../../main.scss';
+.about-section {
+ width: 100%;
+ height: $section-ht;
+ background: linear-gradient(
+  0deg,
+  rgba(100, 38, 83, 1) 32%,
+  rgba(8, 19, 51, 1) 77%
+ );
+}
+.a-details {
+ position: absolute;
+ height: 100%;
+
+ .a-img {
+  position: relative;
+  left: 970px;
+  z-index: 1;
+ }
+
+ .a-stars {
+  position: relative;
+  bottom: 713px;
+  z-index: 0;
+ }
+}
+
+.a-container {
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ height: 100%;
+ width: 970px;
+ padding: 0 50px;
+
+ .a-header {
+  margin-bottom: 40px;
+ }
+ .p-content {
+  color: $white;
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 1.5px;
+  text-align: justify;
+  line-height: 24px;
+  opacity: 0.9;
+ }
+}

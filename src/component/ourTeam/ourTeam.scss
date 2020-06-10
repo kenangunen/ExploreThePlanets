@@ -1,0 +1,169 @@
+@import '../../main.scss';
+
+.team-section {
+ width: 100%;
+ height: $section-ht;
+ background-color: $blue;
+ display: flex;
+ justify-content: flex-end;
+}
+
+.t-details {
+ position: absolute;
+ left: 50px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: $section-ht;
+
+ .info {
+  position: relative;
+  right: 385px;
+  top: 18px;
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 200px;
+  height: 310px;
+  p {
+   display: flex;
+   flex-direction: column;
+   color: $white;
+   font-size: 30px;
+   margin-bottom: 30px;
+   text-transform: uppercase;
+
+   span {
+    margin-bottom: 5px;
+   }
+
+   .count {
+    &::after {
+     position: relative;
+     content: '';
+     width: 100px;
+     padding-left: 80px;
+     border-bottom: 2px solid white;
+     left: 20px;
+     bottom: 2px;
+    }
+   }
+  }
+ }
+}
+
+.t-container {
+ position: relative;
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+ flex-direction: column;
+ height: 100%;
+ width: 1250px;
+ .t-header {
+  position: relative;
+  bottom: 300px;
+  left: 180px;
+  align-self: flex-start;
+ }
+}
+
+.person-box {
+ height: 60px;
+ border-radius: 50%;
+}
+
+.box-frame {
+ position: relative;
+ content: '';
+ bottom: 286px;
+ border-radius: 50% 50% 0 0;
+ padding: 110px 113px;
+}
+
+.person-img {
+ position: relative;
+ bottom: 160px;
+ right: 215px;
+}
+
+.t-content {
+ display: flex;
+ width: 70%;
+ justify-content: space-between;
+ .t-box {
+  width: 230px;
+  height: 300px;
+  .first {
+   @extend .person-box;
+   background-color: $red;
+   &::before {
+    border-left: 2px solid $red;
+    border-right: 2px solid $red;
+    border-top: 2px solid $red;
+    background-color: rgba(242, 75, 89, 0.2);
+    @extend .box-frame;
+   }
+   &::after {
+    content: url(../../designMaterials/ourTeams/first_person.png);
+    @extend .person-img;
+   }
+  }
+  .second {
+   @extend .person-box;
+   background-color: $green;
+   &::before {
+    border-left: 2px solid $green;
+    border-right: 2px solid $green;
+    border-top: 2px solid $green;
+    background-color: rgba(80, 242, 150, 0.2);
+    @extend .box-frame;
+   }
+   &::after {
+    content: url(../../designMaterials/ourTeams/second_person.png);
+    @extend .person-img;
+   }
+  }
+  .third {
+   @extend .person-box;
+   background-color: $yellow;
+   &::before {
+    border-left: 2px solid $yellow;
+    border-right: 2px solid $yellow;
+    border-top: 2px solid $yellow;
+    background-color: rgba(245, 144, 14, 0.2);
+    @extend .box-frame;
+   }
+   &::after {
+    content: url(../../designMaterials/ourTeams/third_person.png);
+    @extend .person-img;
+   }
+  }
+ }
+}
+
+.person-name {
+ text-transform: uppercase;
+ font-size: 22px;
+ letter-spacing: 2px;
+ font-weight: 600;
+ color: $white;
+}
+.person-info {
+ display: flex;
+ flex-direction: column;
+ margin-top: 10px;
+ padding-left: 10px;
+ .p-name {
+  @extend .person-name;
+ }
+ .p-sname {
+  @extend .person-name;
+ }
+ .p-job {
+  color: $white;
+  font-weight: lighter;
+  text-transform: capitalize;
+  margin-top: 5px;
+  font-size: 18px;
+ }
+}
